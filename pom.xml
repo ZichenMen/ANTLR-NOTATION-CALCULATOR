@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>quickpick</groupId>
+  <groupId>antlr4</groupId>
   <artifactId>demo</artifactId>
   <version>0.0.1</version>
 
@@ -16,6 +16,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <antlr4.plugin.version>4.13.1</antlr4.plugin.version>
+    <antlr4.version>4.13.1</antlr4.version>
   </properties>
 
   <dependencies>
@@ -26,7 +28,11 @@
         <version>4.13.1</version>
     </dependency>
 
-
+    <dependency>
+        <groupId>org.antlr</groupId>
+        <artifactId>antlr4-maven-plugin</artifactId>
+        <version>4.13.1</version>
+    </dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -36,11 +42,8 @@
     </dependency>
   </dependencies>
 
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+  <build><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-
-
         <plugin>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-maven-plugin</artifactId>
@@ -53,8 +56,6 @@
                 </execution>
             </executions>
         </plugin>
-       
-
 
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -100,6 +101,5 @@
           <version>3.0.0</version>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 </project>

@@ -1,4 +1,4 @@
-// Generated from /Users/zmen/Documents/demo/src/main/java/quickpick/MathOperations.g4 by ANTLR 4.13.1
+// Generated from MathOperations.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -108,6 +108,14 @@ public class MathOperationsParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_prog; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterProg(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitProg(this);
+		}
 	}
 
 	public final ProgContext prog() throws RecognitionException {
@@ -164,6 +172,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public FactorialContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterFactorial(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitFactorial(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class NaturalLogarithmContext extends ExprContext {
@@ -172,6 +188,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public NaturalLogarithmContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterNaturalLogarithm(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitNaturalLogarithm(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class MulDivContext extends ExprContext {
@@ -183,6 +207,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public MulDivContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterMulDiv(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitMulDiv(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class AddSubContext extends ExprContext {
@@ -194,6 +226,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public AddSubContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterAddSub(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitAddSub(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class ParensContext extends ExprContext {
@@ -201,6 +241,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public ParensContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterParens(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitParens(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class LogarithmBase10Context extends ExprContext {
@@ -209,6 +257,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public LogarithmBase10Context(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterLogarithmBase10(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitLogarithmBase10(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class TrigFunctionsContext extends ExprContext {
@@ -219,6 +275,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public TrigFunctionsContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterTrigFunctions(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitTrigFunctions(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class HyperbolicFunctionsContext extends ExprContext {
@@ -229,6 +293,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public HyperbolicFunctionsContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterHyperbolicFunctions(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitHyperbolicFunctions(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class NumberLiteralContext extends ExprContext {
@@ -236,6 +308,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(NumberContext.class,0);
 		}
 		public NumberLiteralContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterNumberLiteral(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitNumberLiteral(this);
+		}
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class PowerContext extends ExprContext {
@@ -246,6 +326,14 @@ public class MathOperationsParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public PowerContext(ExprContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterPower(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitPower(this);
+		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -472,6 +560,14 @@ public class MathOperationsParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_trig_function; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterTrig_function(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitTrig_function(this);
+		}
 	}
 
 	public final Trig_functionContext trig_function() throws RecognitionException {
@@ -513,6 +609,14 @@ public class MathOperationsParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_hyperbolic_function; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterHyperbolic_function(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitHyperbolic_function(this);
+		}
 	}
 
 	public final Hyperbolic_functionContext hyperbolic_function() throws RecognitionException {
@@ -557,6 +661,14 @@ public class MathOperationsParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterNumber(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitNumber(this);
+		}
 	}
 
 	public final NumberContext number() throws RecognitionException {
@@ -618,6 +730,14 @@ public class MathOperationsParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_special_number; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).enterSpecial_number(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MathOperationsListener ) ((MathOperationsListener)listener).exitSpecial_number(this);
+		}
 	}
 
 	public final Special_numberContext special_number() throws RecognitionException {

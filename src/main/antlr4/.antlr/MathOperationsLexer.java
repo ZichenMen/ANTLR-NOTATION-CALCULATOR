@@ -1,4 +1,4 @@
-// Generated from /Users/zmen/Documents/demo/src/main/java/quickpick/MathOperations.g4 by ANTLR 4.13.1
+// Generated from /Users/zmen/Documents/demo/src/main/antlr4/MathOperations.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

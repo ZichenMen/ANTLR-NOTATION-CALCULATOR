@@ -1,0 +1,6 @@
+SPHERE_KEYWORD=1
+CUBE_KEYWORD=2
+NUMBER=3
+WS=4
+'sphere'=1
+'cube'=2
