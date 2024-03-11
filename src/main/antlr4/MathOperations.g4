@@ -44,7 +44,7 @@ SINH: 'sinh';
 COSH: 'cosh';
 TANH: 'tanh';
 
-// Define what a digit is (you could expand this to include other number bases if needed)
+// Define what a digit is
 DIGIT: '0'..'9';
 
 // Define a rule for whitespace and tell the lexer to skip it
