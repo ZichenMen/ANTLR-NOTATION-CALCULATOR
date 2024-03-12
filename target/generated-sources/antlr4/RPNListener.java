@@ -5,33 +5,48 @@ public class RPNListener extends MathOperationsBaseListener {
 
     public String getRPNExpression() {
         StringBuilder rpn = new StringBuilder();
-        for (String token : stack) {
-            rpn.append(token).append(" ");
+        while (!stack.isEmpty()) {
+            rpn.insert(0, stack.pop() + " ");
         }
         return rpn.toString().trim();
     }
-    
+
     @Override
     public void exitAddSub(MathOperationsParser.AddSubContext ctx) {
-        handleBinaryOperation(ctx.op.getText());
+        if (stack.size() >= 2) {
+            String right = stack.pop();
+            String left = stack.pop();
+            stack.push(left + " " + right + " " + ctx.op.getText());
+        }
     }
 
     @Override
     public void exitMulDiv(MathOperationsParser.MulDivContext ctx) {
-        handleBinaryOperation(ctx.op.getText());
+        if (stack.size() >= 2) {
+            String right = stack.pop();
+            String left = stack.pop();
+            stack.push(left + " " + right + " " + ctx.op.getText());
+        }
     }
 
     @Override
     public void exitPower(MathOperationsParser.PowerContext ctx) {
-        // Since the power operation is right associative, it's handled like other operations
-        handleBinaryOperation("**");
+        if (stack.size() >= 2) {
+            String right = stack.pop();
+            String left = stack.pop();
+            // Correctly reflect the precedence by ensuring this operation's result is immediately combined
+            stack.push(left + " " + right + " **");
+        }
     }
+
+    // Include overrides for other operations similarly, ensuring correct operand order and operation representation
 
     @Override
     public void exitFactorial(MathOperationsParser.FactorialContext ctx) {
-        // Factorial is a unary operation; only one operand is involved
-        String operand = stack.pop();
-        stack.push(operand + " !");
+        if (!stack.isEmpty()) {
+            String operand = stack.pop();
+            stack.push(operand + " !");
+        }
     }
     
     @Override
