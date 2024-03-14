@@ -28,133 +28,133 @@ public class MathOperationsBaseListener implements MathOperationsListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFactorial(MathOperationsParser.FactorialContext ctx) { }
+	@Override public void enterExpr(MathOperationsParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFactorial(MathOperationsParser.FactorialContext ctx) { }
+	@Override public void exitExpr(MathOperationsParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNaturalLogarithm(MathOperationsParser.NaturalLogarithmContext ctx) { }
+	@Override public void enterAddSubExpr(MathOperationsParser.AddSubExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNaturalLogarithm(MathOperationsParser.NaturalLogarithmContext ctx) { }
+	@Override public void exitAddSubExpr(MathOperationsParser.AddSubExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMulDiv(MathOperationsParser.MulDivContext ctx) { }
+	@Override public void enterMulDivExpr(MathOperationsParser.MulDivExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMulDiv(MathOperationsParser.MulDivContext ctx) { }
+	@Override public void exitMulDivExpr(MathOperationsParser.MulDivExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddSub(MathOperationsParser.AddSubContext ctx) { }
+	@Override public void enterFactorialExpr(MathOperationsParser.FactorialExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAddSub(MathOperationsParser.AddSubContext ctx) { }
+	@Override public void exitFactorialExpr(MathOperationsParser.FactorialExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParens(MathOperationsParser.ParensContext ctx) { }
+	@Override public void enterFactorialOp(MathOperationsParser.FactorialOpContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParens(MathOperationsParser.ParensContext ctx) { }
+	@Override public void exitFactorialOp(MathOperationsParser.FactorialOpContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogarithmBase10(MathOperationsParser.LogarithmBase10Context ctx) { }
+	@Override public void enterPowerExpr(MathOperationsParser.PowerExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLogarithmBase10(MathOperationsParser.LogarithmBase10Context ctx) { }
+	@Override public void exitPowerExpr(MathOperationsParser.PowerExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTrigFunctions(MathOperationsParser.TrigFunctionsContext ctx) { }
+	@Override public void enterUnaryExpr(MathOperationsParser.UnaryExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTrigFunctions(MathOperationsParser.TrigFunctionsContext ctx) { }
+	@Override public void exitUnaryExpr(MathOperationsParser.UnaryExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHyperbolicFunctions(MathOperationsParser.HyperbolicFunctionsContext ctx) { }
+	@Override public void enterAtom(MathOperationsParser.AtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHyperbolicFunctions(MathOperationsParser.HyperbolicFunctionsContext ctx) { }
+	@Override public void exitAtom(MathOperationsParser.AtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNumberLiteral(MathOperationsParser.NumberLiteralContext ctx) { }
+	@Override public void enterFunction(MathOperationsParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNumberLiteral(MathOperationsParser.NumberLiteralContext ctx) { }
+	@Override public void exitFunction(MathOperationsParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPower(MathOperationsParser.PowerContext ctx) { }
+	@Override public void enterLogarithmic_function(MathOperationsParser.Logarithmic_functionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPower(MathOperationsParser.PowerContext ctx) { }
+	@Override public void exitLogarithmic_function(MathOperationsParser.Logarithmic_functionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTrig_function(MathOperationsParser.Trig_functionContext ctx) { }
+	@Override public void enterTrigonometric_function(MathOperationsParser.Trigonometric_functionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTrig_function(MathOperationsParser.Trig_functionContext ctx) { }
+	@Override public void exitTrigonometric_function(MathOperationsParser.Trigonometric_functionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

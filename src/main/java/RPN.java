@@ -22,8 +22,7 @@ public class RPN {
             MathOperationsLexer lexer = new MathOperationsLexer(CharStreams.fromString(expression));
             MathOperationsParser parser = new MathOperationsParser(new CommonTokenStream(lexer));
 
-            // Parse the expression to generate the parse tree
-            ParseTree tree = parser.prog(); // 'prog' is the actual starting rule here
+            ParseTree tree = parser.prog(); 
 
             // Walk the parse tree with the RPNListener
             ParseTreeWalker walker = new ParseTreeWalker();
@@ -31,15 +30,13 @@ public class RPN {
             walker.walk(listener, tree);
 
             // Get the RPN expression from the listener
-            String rpnExpression = listener.getRPNExpression();
+            String rpnExpression = listener.getResult();
 
             // Evaluate the RPN expression
             double result = RPNEvaluator.evaluate(rpnExpression);
 
-            // Format and output the result as specified, with no trailing zeros
             String formattedResult = formatResult(result);
 
-            // Output the original infix expression, the RPN expression, and the computation result
             System.out.println("Infix Expression: " + expression);
             System.out.println("RPN Expression: " + rpnExpression);
             System.out.println("Computation Result: " + formattedResult);

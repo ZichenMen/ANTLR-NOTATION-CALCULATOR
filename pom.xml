@@ -21,6 +21,16 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+    </dependency>
+
+
+
     <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
     <dependency>
         <groupId>org.antlr</groupId>
@@ -34,16 +44,18 @@
         <version>4.13.1</version>
     </dependency>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+    
   </dependencies>
 
   <build><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version> <!-- Use a version compatible with your setup -->
+        </plugin>
+
         <plugin>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-maven-plugin</artifactId>
@@ -74,10 +86,6 @@
                     <source>1.8</source> <!-- Use Java 8 -->
                     <target>1.8</target> <!-- Use Java 8 -->
           </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

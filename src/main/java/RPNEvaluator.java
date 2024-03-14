@@ -28,15 +28,15 @@ public class RPNEvaluator {
                 case "!":
                     stack.push(factorial(stack.pop().intValue()));
                     break;
-                case "sin":
-                    stack.push(Math.sin(Math.toRadians(stack.pop())));
+                    case "sin":
+                    stack.push(Math.sin(stack.pop()));
                     break;
                 case "cos":
-                    stack.push(Math.cos(Math.toRadians(stack.pop())));
+                    stack.push(Math.cos(stack.pop()));
                     break;
                 case "tan":
-                    stack.push(Math.tan(Math.toRadians(stack.pop())));
-                    break;
+                    stack.push(Math.tan(stack.pop())); 
+                    break;                
                 case "ln":
                     stack.push(Math.log(stack.pop()));
                     break;

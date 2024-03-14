@@ -17,135 +17,115 @@ public interface MathOperationsListener extends ParseTreeListener {
 	 */
 	void exitProg(MathOperationsParser.ProgContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Factorial}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterFactorial(MathOperationsParser.FactorialContext ctx);
+	void enterExpr(MathOperationsParser.ExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Factorial}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitFactorial(MathOperationsParser.FactorialContext ctx);
+	void exitExpr(MathOperationsParser.ExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code NaturalLogarithm}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#addSubExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterNaturalLogarithm(MathOperationsParser.NaturalLogarithmContext ctx);
+	void enterAddSubExpr(MathOperationsParser.AddSubExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code NaturalLogarithm}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#addSubExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitNaturalLogarithm(MathOperationsParser.NaturalLogarithmContext ctx);
+	void exitAddSubExpr(MathOperationsParser.AddSubExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code MulDiv}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#mulDivExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterMulDiv(MathOperationsParser.MulDivContext ctx);
+	void enterMulDivExpr(MathOperationsParser.MulDivExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code MulDiv}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#mulDivExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitMulDiv(MathOperationsParser.MulDivContext ctx);
+	void exitMulDivExpr(MathOperationsParser.MulDivExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code AddSub}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#factorialExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddSub(MathOperationsParser.AddSubContext ctx);
+	void enterFactorialExpr(MathOperationsParser.FactorialExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code AddSub}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#factorialExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddSub(MathOperationsParser.AddSubContext ctx);
+	void exitFactorialExpr(MathOperationsParser.FactorialExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Parens}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#factorialOp}.
 	 * @param ctx the parse tree
 	 */
-	void enterParens(MathOperationsParser.ParensContext ctx);
+	void enterFactorialOp(MathOperationsParser.FactorialOpContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Parens}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#factorialOp}.
 	 * @param ctx the parse tree
 	 */
-	void exitParens(MathOperationsParser.ParensContext ctx);
+	void exitFactorialOp(MathOperationsParser.FactorialOpContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code LogarithmBase10}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#powerExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterLogarithmBase10(MathOperationsParser.LogarithmBase10Context ctx);
+	void enterPowerExpr(MathOperationsParser.PowerExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code LogarithmBase10}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#powerExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitLogarithmBase10(MathOperationsParser.LogarithmBase10Context ctx);
+	void exitPowerExpr(MathOperationsParser.PowerExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code TrigFunctions}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#unaryExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterTrigFunctions(MathOperationsParser.TrigFunctionsContext ctx);
+	void enterUnaryExpr(MathOperationsParser.UnaryExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code TrigFunctions}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#unaryExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitTrigFunctions(MathOperationsParser.TrigFunctionsContext ctx);
+	void exitUnaryExpr(MathOperationsParser.UnaryExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code HyperbolicFunctions}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#atom}.
 	 * @param ctx the parse tree
 	 */
-	void enterHyperbolicFunctions(MathOperationsParser.HyperbolicFunctionsContext ctx);
+	void enterAtom(MathOperationsParser.AtomContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code HyperbolicFunctions}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#atom}.
 	 * @param ctx the parse tree
 	 */
-	void exitHyperbolicFunctions(MathOperationsParser.HyperbolicFunctionsContext ctx);
+	void exitAtom(MathOperationsParser.AtomContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code NumberLiteral}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#function}.
 	 * @param ctx the parse tree
 	 */
-	void enterNumberLiteral(MathOperationsParser.NumberLiteralContext ctx);
+	void enterFunction(MathOperationsParser.FunctionContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code NumberLiteral}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#function}.
 	 * @param ctx the parse tree
 	 */
-	void exitNumberLiteral(MathOperationsParser.NumberLiteralContext ctx);
+	void exitFunction(MathOperationsParser.FunctionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Power}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#logarithmic_function}.
 	 * @param ctx the parse tree
 	 */
-	void enterPower(MathOperationsParser.PowerContext ctx);
+	void enterLogarithmic_function(MathOperationsParser.Logarithmic_functionContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Power}
-	 * labeled alternative in {@link MathOperationsParser#expr}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#logarithmic_function}.
 	 * @param ctx the parse tree
 	 */
-	void exitPower(MathOperationsParser.PowerContext ctx);
+	void exitLogarithmic_function(MathOperationsParser.Logarithmic_functionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MathOperationsParser#trig_function}.
+	 * Enter a parse tree produced by {@link MathOperationsParser#trigonometric_function}.
 	 * @param ctx the parse tree
 	 */
-	void enterTrig_function(MathOperationsParser.Trig_functionContext ctx);
+	void enterTrigonometric_function(MathOperationsParser.Trigonometric_functionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MathOperationsParser#trig_function}.
+	 * Exit a parse tree produced by {@link MathOperationsParser#trigonometric_function}.
 	 * @param ctx the parse tree
 	 */
-	void exitTrig_function(MathOperationsParser.Trig_functionContext ctx);
+	void exitTrigonometric_function(MathOperationsParser.Trigonometric_functionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MathOperationsParser#hyperbolic_function}.
 	 * @param ctx the parse tree

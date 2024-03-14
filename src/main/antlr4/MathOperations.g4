@@ -1,35 +1,81 @@
 grammar MathOperations;
 
-// Parser rules
 prog: expr* EOF;
 
-expr: expr op=('*' | '/') expr # MulDiv
-    | expr op=('+' | '-') expr # AddSub
-    | expr '**' expr          # Power
-    | 'log' '(' expr ')'      # LogarithmBase10
-    | 'ln' '(' expr ')'       # NaturalLogarithm
-    | trig_function '(' expr ')' # TrigFunctions
-    | hyperbolic_function '(' expr ')' # HyperbolicFunctions
-    | expr '!'                # Factorial
-    | '(' expr ')'            # Parens
-    | number                  # NumberLiteral
-    ;
+expr: addSubExpr;
 
-trig_function: 'sin' | 'cos' | 'tan' | 'asin' | 'acos' | 'atan';
-hyperbolic_function: 'sinh' | 'cosh' | 'tanh';
+addSubExpr
+ : mulDivExpr (op=('+' | '-') mulDivExpr)*
+ ;
 
-number: FLOAT
-    | INT
-    | SCI_NUM
-    | special_number;
+mulDivExpr
+ : factorialExpr (op=('*' | '/') factorialExpr)*
+ ;
 
-special_number: 'pi' | 'e';
+factorialExpr
+ : powerExpr factorialOp?
+ ;
+
+factorialOp
+ : '!' factorialExpr?
+ ;
+
+powerExpr
+ : unaryExpr ('**' unaryExpr)*
+ ;
+
+unaryExpr
+ : ('+' | '-')? atom
+ ;
+
+atom
+ : number
+ | '(' expr ')'            // Parentheses have the highest precedence
+ | function                // Function calls (logarithmic, trigonometric, hyperbolic)
+ | special_number
+ ;
+
+function
+ : logarithmic_function '(' expr ')'
+ | trigonometric_function '(' expr ')'
+ | hyperbolic_function '(' expr ')'
+ ;
+
+logarithmic_function
+ : 'log'
+ | 'ln'
+ ;
+
+trigonometric_function
+ : 'sin'
+ | 'cos'
+ | 'tan'
+ | 'asin'
+ | 'acos'
+ | 'atan'
+ ;
+
+hyperbolic_function
+ : 'sinh'
+ | 'cosh'
+ | 'tanh'
+ ;
+
+number
+ : FLOAT
+ | INT
+ | SCI_NUM
+ ;
+
+special_number
+ : 'pi'
+ | 'e'
+ ;
 
 // Lexer rules
-FLOAT: DIGIT+ '.' DIGIT+;
+FLOAT: DIGIT+ '.' DIGIT* | '.' DIGIT+;
 INT: DIGIT+;
 SCI_NUM: DIGIT+ ('e' | 'E') ('+' | '-')? DIGIT+;
-
 PI: 'pi';
 E: 'e';
 LOG: 'log';
@@ -43,9 +89,5 @@ ATAN: 'atan';
 SINH: 'sinh';
 COSH: 'cosh';
 TANH: 'tanh';
-
-// Define what a digit is
 DIGIT: '0'..'9';
-
-// Define a rule for whitespace and tell the lexer to skip it
 WS: [ \t\r\n]+ -> skip;

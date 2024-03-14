@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="quickpick.AppTest" time="0.022" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RPNTest" time="0.018" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/zmen/Documents/demo/target/test-classes:/Users/zmen/Documents/demo/target/classes:/Users/zmen/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr4-maven-plugin/4.13.1/antlr4-maven-plugin-4.13.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.12.1/plexus-compiler-api-2.12.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/Users/zmen/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar:/Users/zmen/.m2/repository/org/antlr/antlr4/4.13.1/antlr4-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar:/Users/zmen/.m2/repository/org/antlr/ST4/4.3.4/ST4-4.3.4.jar:/Users/zmen/.m2/repository/org/abego/treelayout/org.abego.treelayout.core/1.0.3/org.abego.treelayout.core-1.0.3.jar:/Users/zmen/.m2/repository/com/ibm/icu/icu4j/72.1/icu4j-72.1.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-api/2.0.0/slf4j-api-2.0.0.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-simple/2.0.0/slf4j-simple-2.0.0.jar:/Users/zmen/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/zmen/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/zmen/Documents/demo/target/test-classes:/Users/zmen/Documents/demo/target/classes:/Users/zmen/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/zmen/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/zmen/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr4-maven-plugin/4.13.1/antlr4-maven-plugin-4.13.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.12.1/plexus-compiler-api-2.12.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/Users/zmen/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar:/Users/zmen/.m2/repository/org/antlr/antlr4/4.13.1/antlr4-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar:/Users/zmen/.m2/repository/org/antlr/ST4/4.3.4/ST4-4.3.4.jar:/Users/zmen/.m2/repository/org/abego/treelayout/org.abego.treelayout.core/1.0.3/org.abego.treelayout.core-1.0.3.jar:/Users/zmen/.m2/repository/com/ibm/icu/icu4j/72.1/icu4j-72.1.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-api/2.0.0/slf4j-api-2.0.0.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-simple/2.0.0/slf4j-simple-2.0.0.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/zmen/Documents/demo/target/surefire/surefirebooter14095088505825800868.jar /Users/zmen/Documents/demo/target/surefire 2024-03-11T16-38-25_436-jvmRun1 surefire4810075760464293400tmp surefire_012166075905268951985tmp"/>
+    <property name="sun.java.command" value="/Users/zmen/Documents/demo/target/surefire/surefirebooter12424911181011238820.jar /Users/zmen/Documents/demo/target/surefire 2024-03-13T22-33-03_168-jvmRun1 surefire14949701704709974677tmp surefire_011388905801579311628tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/zmen/Documents/demo/target/test-classes:/Users/zmen/Documents/demo/target/classes:/Users/zmen/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr4-maven-plugin/4.13.1/antlr4-maven-plugin-4.13.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.12.1/plexus-compiler-api-2.12.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/Users/zmen/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar:/Users/zmen/.m2/repository/org/antlr/antlr4/4.13.1/antlr4-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar:/Users/zmen/.m2/repository/org/antlr/ST4/4.3.4/ST4-4.3.4.jar:/Users/zmen/.m2/repository/org/abego/treelayout/org.abego.treelayout.core/1.0.3/org.abego.treelayout.core-1.0.3.jar:/Users/zmen/.m2/repository/com/ibm/icu/icu4j/72.1/icu4j-72.1.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-api/2.0.0/slf4j-api-2.0.0.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-simple/2.0.0/slf4j-simple-2.0.0.jar:/Users/zmen/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/zmen/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/zmen/Documents/demo/target/test-classes:/Users/zmen/Documents/demo/target/classes:/Users/zmen/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/zmen/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/zmen/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr4-maven-plugin/4.13.1/antlr4-maven-plugin-4.13.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.12.1/plexus-compiler-api-2.12.1.jar:/Users/zmen/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/Users/zmen/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar:/Users/zmen/.m2/repository/org/antlr/antlr4/4.13.1/antlr4-4.13.1.jar:/Users/zmen/.m2/repository/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar:/Users/zmen/.m2/repository/org/antlr/ST4/4.3.4/ST4-4.3.4.jar:/Users/zmen/.m2/repository/org/abego/treelayout/org.abego.treelayout.core/1.0.3/org.abego.treelayout.core-1.0.3.jar:/Users/zmen/.m2/repository/com/ibm/icu/icu4j/72.1/icu4j-72.1.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-api/2.0.0/slf4j-api-2.0.0.jar:/Users/zmen/.m2/repository/org/slf4j/slf4j-simple/2.0.0/slf4j-simple-2.0.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/zmen"/>
     <property name="user.language" value="en"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/zmen/Documents/demo/target/surefire/surefirebooter14095088505825800868.jar"/>
+    <property name="surefire.real.class.path" value="/Users/zmen/Documents/demo/target/surefire/surefirebooter12424911181011238820.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.2"/>
@@ -58,5 +58,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="quickpick.AppTest" time="0.004"/>
+  <testcase name="testTrigonometricFunctionSin" classname="RPNTest" time="0.002"/>
+  <testcase name="testFactorial" classname="RPNTest" time="0"/>
+  <testcase name="testAddition" classname="RPNTest" time="0"/>
 </testsuite>
